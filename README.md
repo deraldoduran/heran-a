@@ -69,3 +69,13 @@ INSERT INTO cidades (NOME, POPULACAO, ALTITUDE) VALUES
 SELECT * FROM cidades;
 --só mostra as cidades
 SELECT * FROM ONLY cidades;
+
+-- ALTERAR NOMES DAS TABELAS
+ALTER TABLE teste RENAME TO cliente;
+ALTER TABLE cliente RENAME COLUMN enderesso to endereco;
+ALTER TABLE cliente ALTER COLUMN nome TYPE VARCHAR(40);
+
+--coloca um valor default de minha casa
+ALTER TABLE cliente ALTER COLUMN endereco SET DEFAULT 'minha casa'; 
+--muda o endereço em uma célula
+UPDATE cliente SET endereco = 'rua 123' WHERE nome = 'juk';
