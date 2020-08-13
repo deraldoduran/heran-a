@@ -79,3 +79,5 @@ ALTER TABLE cliente ALTER COLUMN nome TYPE VARCHAR(40);
 ALTER TABLE cliente ALTER COLUMN endereco SET DEFAULT 'minha casa'; 
 --muda o endereço em uma célula
 UPDATE cliente SET endereco = 'rua 123' WHERE nome = 'juk';
+--ELIMINA O DEFAULT PARA OS PRÓXIMOS
+ALTER TABLE cliente ALTER COLUMN endereco DROP DEFAULT;
